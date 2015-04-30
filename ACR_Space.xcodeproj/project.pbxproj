@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F1E00AE1AE5FD6000E6DFAF /* 768x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F1E00AC1AE5FD6000E6DFAF /* 768x1024.png */; };
+		4F1E00AF1AE5FD6000E6DFAF /* 1024x768.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F1E00AD1AE5FD6000E6DFAF /* 1024x768.png */; };
 		4F1F223A1AC22FD7001FF6DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F22391AC22FD7001FF6DC /* main.m */; };
 		4F1F223D1AC22FD7001FF6DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F223C1AC22FD7001FF6DC /* AppDelegate.m */; };
 		4F1F22401AC22FD7001FF6DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F223F1AC22FD7001FF6DC /* ViewController.m */; };
 		4F1F22431AC22FD8001FF6DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F1F22411AC22FD7001FF6DC /* Main.storyboard */; };
 		4F1F22451AC22FD8001FF6DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1F22441AC22FD8001FF6DC /* Images.xcassets */; };
-		4F1F22481AC22FD8001FF6DC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F1F22461AC22FD8001FF6DC /* LaunchScreen.xib */; };
 		4F1F22541AC22FD8001FF6DC /* ACR_SpaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F22531AC22FD8001FF6DC /* ACR_SpaceTests.m */; };
+		4F1F225F1AC232B1001FF6DC /* MechaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F225E1AC232B1001FF6DC /* MechaView.m */; };
+		4F390C871AD5EFAF0016C63D /* drawSpeakers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F390C861AD5EFAF0016C63D /* drawSpeakers.m */; };
+		4FC165E41ADE0F5800541BF9 /* settingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC165E31ADE0F5800541BF9 /* settingsViewController.m */; };
+		4FC165E91ADF1A3800541BF9 /* riddumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC165E81ADF1A3800541BF9 /* riddumView.m */; };
+		4FC646561AC8B87600309531 /* libVVBasics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC646451AC8B7EB00309531 /* libVVBasics.a */; };
+		4FC646571AC8B87600309531 /* libVVOSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC646471AC8B7EB00309531 /* libVVOSC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,9 +31,172 @@
 			remoteGlobalIDString = 4F1F22331AC22FD6001FF6DC;
 			remoteInfo = ACR_Space;
 		};
+		4FC646281AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 961EA8ED100E8565007E6C25;
+			remoteInfo = VVBasics;
+		};
+		4FC6462A1AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96C8073A19817C1600FA7825;
+			remoteInfo = VVBufferPool;
+		};
+		4FC6462C1AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96C8071219817BFE00FA7825;
+			remoteInfo = DDMathParser;
+		};
+		4FC6462E1AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96C8072619817C0A00FA7825;
+			remoteInfo = JSONKit;
+		};
+		4FC646301AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 964FF27D1981B5AF00CCC808;
+			remoteInfo = VVISFKit;
+		};
+		4FC646321AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96B06C1C18BE0ECF000A921C;
+			remoteInfo = VVUIToolbox;
+		};
+		4FC646341AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 961745F4100F86B400FB60E6;
+			remoteInfo = VVMIDI;
+		};
+		4FC646361AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9628D0C5100E89F700C3944E;
+			remoteInfo = VVOSC;
+		};
+		4FC646381AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 968FAA86108B6141000E470D;
+			remoteInfo = CrashReporterTestApp;
+		};
+		4FC6463A1AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9656D900100F89BA0064EEA6;
+			remoteInfo = MIDITestApp;
+		};
+		4FC6463C1AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9628D179100E8B4D00C3944E;
+			remoteInfo = OSCTestApp;
+		};
+		4FC6463E1AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96B49302106AEB4C008FB26E;
+			remoteInfo = MIDIviaOSC;
+		};
+		4FC646401AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 966CCBD81431EFB9006D580F;
+			remoteInfo = OSCQueryTest;
+		};
+		4FC646421AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96ACD7211706416300138AE6;
+			remoteInfo = OSCPingTester;
+		};
+		4FC646441AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96C18C2D185A1A740082DE35;
+			remoteInfo = VVBasicsStatic;
+		};
+		4FC646461AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96C18C3E185A1A7D0082DE35;
+			remoteInfo = VVOSCStatic;
+		};
+		4FC646481AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1A6F726619033A9D00A6FBAD;
+			remoteInfo = VVUIToolboxStatic;
+		};
+		4FC6464A1AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 965C1CAC1983BE7D00111741;
+			remoteInfo = "GLScene Test App";
+		};
+		4FC6464C1AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 965C1CC71983BE9A00111741;
+			remoteInfo = "QCGLScene Test App";
+		};
+		4FC6464E1AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 965C1CE21983BEA200111741;
+			remoteInfo = "CIGLScene Test App";
+		};
+		4FC646501AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 965C1CFD198403C300111741;
+			remoteInfo = "ISFGLScene Test App";
+		};
+		4FC646521AC8B7EB00309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96140109198AD46D00335292;
+			remoteInfo = "QT and Hap Test App";
+		};
+		4FC646541AC8B85800309531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 968A7EEB185BA3100075DEB1;
+			remoteInfo = "Build iOS static libs";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F1E00AC1AE5FD6000E6DFAF /* 768x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 768x1024.png; path = Images.xcassets/768x1024.png; sourceTree = "<group>"; };
+		4F1E00AD1AE5FD6000E6DFAF /* 1024x768.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1024x768.png; path = Images.xcassets/1024x768.png; sourceTree = "<group>"; };
 		4F1F22341AC22FD6001FF6DC /* ACR_Space.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACR_Space.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1F22381AC22FD7001FF6DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F1F22391AC22FD7001FF6DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,10 +206,18 @@
 		4F1F223F1AC22FD7001FF6DC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4F1F22421AC22FD7001FF6DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F1F22441AC22FD8001FF6DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4F1F22471AC22FD8001FF6DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4F1F224D1AC22FD8001FF6DC /* ACR_SpaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACR_SpaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1F22521AC22FD8001FF6DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F1F22531AC22FD8001FF6DC /* ACR_SpaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACR_SpaceTests.m; sourceTree = "<group>"; };
+		4F1F225D1AC232B1001FF6DC /* MechaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MechaView.h; path = Views/MechaView.h; sourceTree = "<group>"; };
+		4F1F225E1AC232B1001FF6DC /* MechaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MechaView.m; path = Views/MechaView.m; sourceTree = "<group>"; };
+		4F390C851AD5EFAF0016C63D /* drawSpeakers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawSpeakers.h; sourceTree = "<group>"; };
+		4F390C861AD5EFAF0016C63D /* drawSpeakers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = drawSpeakers.m; sourceTree = "<group>"; };
+		4FC165E21ADE0F5800541BF9 /* settingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsViewController.h; sourceTree = "<group>"; };
+		4FC165E31ADE0F5800541BF9 /* settingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsViewController.m; sourceTree = "<group>"; };
+		4FC165E71ADF1A3800541BF9 /* riddumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = riddumView.h; path = Views/riddumView.h; sourceTree = "<group>"; };
+		4FC165E81ADF1A3800541BF9 /* riddumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = riddumView.m; path = Views/riddumView.m; sourceTree = "<group>"; };
+		4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VVOpenSource.xcodeproj; path = "../vvopensource-master/VVOpenSource.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +225,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FC646561AC8B87600309531 /* libVVBasics.a in Frameworks */,
+				4FC646571AC8B87600309531 /* libVVOSC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +246,7 @@
 				4F1F22361AC22FD6001FF6DC /* ACR_Space */,
 				4F1F22501AC22FD8001FF6DC /* ACR_SpaceTests */,
 				4F1F22351AC22FD6001FF6DC /* Products */,
+				4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,13 +262,17 @@
 		4F1F22361AC22FD6001FF6DC /* ACR_Space */ = {
 			isa = PBXGroup;
 			children = (
-				4F1F223B1AC22FD7001FF6DC /* AppDelegate.h */,
-				4F1F223C1AC22FD7001FF6DC /* AppDelegate.m */,
+				4F1F22411AC22FD7001FF6DC /* Main.storyboard */,
+				4FC165E71ADF1A3800541BF9 /* riddumView.h */,
+				4FC165E81ADF1A3800541BF9 /* riddumView.m */,
 				4F1F223E1AC22FD7001FF6DC /* ViewController.h */,
 				4F1F223F1AC22FD7001FF6DC /* ViewController.m */,
-				4F1F22411AC22FD7001FF6DC /* Main.storyboard */,
-				4F1F22441AC22FD8001FF6DC /* Images.xcassets */,
-				4F1F22461AC22FD8001FF6DC /* LaunchScreen.xib */,
+				4FC165E21ADE0F5800541BF9 /* settingsViewController.h */,
+				4FC165E31ADE0F5800541BF9 /* settingsViewController.m */,
+				4F1F225D1AC232B1001FF6DC /* MechaView.h */,
+				4F1F225E1AC232B1001FF6DC /* MechaView.m */,
+				4F390C851AD5EFAF0016C63D /* drawSpeakers.h */,
+				4F390C861AD5EFAF0016C63D /* drawSpeakers.m */,
 				4F1F22371AC22FD7001FF6DC /* Supporting Files */,
 			);
 			path = ACR_Space;
@@ -96,6 +281,11 @@
 		4F1F22371AC22FD7001FF6DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4F1E00AC1AE5FD6000E6DFAF /* 768x1024.png */,
+				4F1E00AD1AE5FD6000E6DFAF /* 1024x768.png */,
+				4F1F22441AC22FD8001FF6DC /* Images.xcassets */,
+				4F1F223B1AC22FD7001FF6DC /* AppDelegate.h */,
+				4F1F223C1AC22FD7001FF6DC /* AppDelegate.m */,
 				4F1F22381AC22FD7001FF6DC /* Info.plist */,
 				4F1F22391AC22FD7001FF6DC /* main.m */,
 			);
@@ -119,6 +309,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4FC6460D1AC8B7E800309531 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FC646291AC8B7EB00309531 /* VVBasics.framework */,
+				4FC6462B1AC8B7EB00309531 /* VVBufferPool.framework */,
+				4FC6462D1AC8B7EB00309531 /* DDMathParser.framework */,
+				4FC6462F1AC8B7EB00309531 /* JSONKit.framework */,
+				4FC646311AC8B7EB00309531 /* VVISFKit.framework */,
+				4FC646331AC8B7EB00309531 /* VVUIToolbox.framework */,
+				4FC646351AC8B7EB00309531 /* VVMIDI.framework */,
+				4FC646371AC8B7EB00309531 /* VVOSC.framework */,
+				4FC646391AC8B7EB00309531 /* CrashReporterTestApp.app */,
+				4FC6463B1AC8B7EB00309531 /* MIDITestApp.app */,
+				4FC6463D1AC8B7EB00309531 /* OSCTestApp.app */,
+				4FC6463F1AC8B7EB00309531 /* MIDIviaOSC.app */,
+				4FC646411AC8B7EB00309531 /* OSCQueryTest.app */,
+				4FC646431AC8B7EB00309531 /* OSCPingTester.app */,
+				4FC646451AC8B7EB00309531 /* libVVBasics.a */,
+				4FC646471AC8B7EB00309531 /* libVVOSC.a */,
+				4FC646491AC8B7EB00309531 /* libVVUIToolbox.a */,
+				4FC6464B1AC8B7EB00309531 /* GLScene Test App.app */,
+				4FC6464D1AC8B7EB00309531 /* QCGLScene Test App.app */,
+				4FC6464F1AC8B7EB00309531 /* CIGLScene Test App.app */,
+				4FC646511AC8B7EB00309531 /* ISFGLScene Test App.app */,
+				4FC646531AC8B7EB00309531 /* QT and Hap Test App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,6 +352,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4FC646551AC8B85800309531 /* PBXTargetDependency */,
 			);
 			name = ACR_Space;
 			productName = ACR_Space;
@@ -186,6 +406,12 @@
 			mainGroup = 4F1F222B1AC22FD6001FF6DC;
 			productRefGroup = 4F1F22351AC22FD6001FF6DC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4FC6460D1AC8B7E800309531 /* Products */;
+					ProjectRef = 4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4F1F22331AC22FD6001FF6DC /* ACR_Space */,
@@ -194,14 +420,172 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		4FC646291AC8B7EB00309531 /* VVBasics.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVBasics.framework;
+			remoteRef = 4FC646281AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC6462B1AC8B7EB00309531 /* VVBufferPool.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVBufferPool.framework;
+			remoteRef = 4FC6462A1AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC6462D1AC8B7EB00309531 /* DDMathParser.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DDMathParser.framework;
+			remoteRef = 4FC6462C1AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC6462F1AC8B7EB00309531 /* JSONKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONKit.framework;
+			remoteRef = 4FC6462E1AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC646311AC8B7EB00309531 /* VVISFKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVISFKit.framework;
+			remoteRef = 4FC646301AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC646331AC8B7EB00309531 /* VVUIToolbox.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVUIToolbox.framework;
+			remoteRef = 4FC646321AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC646351AC8B7EB00309531 /* VVMIDI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVMIDI.framework;
+			remoteRef = 4FC646341AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC646371AC8B7EB00309531 /* VVOSC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVOSC.framework;
+			remoteRef = 4FC646361AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC646391AC8B7EB00309531 /* CrashReporterTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CrashReporterTestApp.app;
+			remoteRef = 4FC646381AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC6463B1AC8B7EB00309531 /* MIDITestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = MIDITestApp.app;
+			remoteRef = 4FC6463A1AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC6463D1AC8B7EB00309531 /* OSCTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OSCTestApp.app;
+			remoteRef = 4FC6463C1AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC6463F1AC8B7EB00309531 /* MIDIviaOSC.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = MIDIviaOSC.app;
+			remoteRef = 4FC6463E1AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC646411AC8B7EB00309531 /* OSCQueryTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OSCQueryTest.app;
+			remoteRef = 4FC646401AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC646431AC8B7EB00309531 /* OSCPingTester.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OSCPingTester.app;
+			remoteRef = 4FC646421AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC646451AC8B7EB00309531 /* libVVBasics.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVVBasics.a;
+			remoteRef = 4FC646441AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC646471AC8B7EB00309531 /* libVVOSC.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVVOSC.a;
+			remoteRef = 4FC646461AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC646491AC8B7EB00309531 /* libVVUIToolbox.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVVUIToolbox.a;
+			remoteRef = 4FC646481AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC6464B1AC8B7EB00309531 /* GLScene Test App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "GLScene Test App.app";
+			remoteRef = 4FC6464A1AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC6464D1AC8B7EB00309531 /* QCGLScene Test App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "QCGLScene Test App.app";
+			remoteRef = 4FC6464C1AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC6464F1AC8B7EB00309531 /* CIGLScene Test App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "CIGLScene Test App.app";
+			remoteRef = 4FC6464E1AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC646511AC8B7EB00309531 /* ISFGLScene Test App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "ISFGLScene Test App.app";
+			remoteRef = 4FC646501AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC646531AC8B7EB00309531 /* QT and Hap Test App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "QT and Hap Test App.app";
+			remoteRef = 4FC646521AC8B7EB00309531 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		4F1F22321AC22FD6001FF6DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4F1F22431AC22FD8001FF6DC /* Main.storyboard in Resources */,
-				4F1F22481AC22FD8001FF6DC /* LaunchScreen.xib in Resources */,
+				4F1E00AF1AE5FD6000E6DFAF /* 1024x768.png in Resources */,
 				4F1F22451AC22FD8001FF6DC /* Images.xcassets in Resources */,
+				4F1E00AE1AE5FD6000E6DFAF /* 768x1024.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +603,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F390C871AD5EFAF0016C63D /* drawSpeakers.m in Sources */,
 				4F1F22401AC22FD7001FF6DC /* ViewController.m in Sources */,
 				4F1F223D1AC22FD7001FF6DC /* AppDelegate.m in Sources */,
 				4F1F223A1AC22FD7001FF6DC /* main.m in Sources */,
+				4F1F225F1AC232B1001FF6DC /* MechaView.m in Sources */,
+				4FC165E41ADE0F5800541BF9 /* settingsViewController.m in Sources */,
+				4FC165E91ADF1A3800541BF9 /* riddumView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +629,11 @@
 			target = 4F1F22331AC22FD6001FF6DC /* ACR_Space */;
 			targetProxy = 4F1F224E1AC22FD8001FF6DC /* PBXContainerItemProxy */;
 		};
+		4FC646551AC8B85800309531 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Build iOS static libs";
+			targetProxy = 4FC646541AC8B85800309531 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -250,14 +643,6 @@
 				4F1F22421AC22FD7001FF6DC /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4F1F22461AC22FD8001FF6DC /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4F1F22471AC22FD8001FF6DC /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -297,7 +682,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -333,7 +718,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -345,8 +730,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ACR_Space/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -355,8 +742,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ACR_Space/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -414,6 +803,7 @@
 				4F1F22591AC22FD8001FF6DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F1F225A1AC22FD8001FF6DC /* Build configuration list for PBXNativeTarget "ACR_SpaceTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +812,7 @@
 				4F1F225C1AC22FD8001FF6DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
