@@ -8,7 +8,9 @@
 
 #import "riddumView.h"
 
-@implementation riddumView
+@implementation riddumView {
+   radiationView *myRadiationView;
+}
 
 - (id)initWithFrame:(CGRect)frame
              colour:(UIColor*)col
@@ -19,8 +21,6 @@
    {
       [self setBackgroundColor:[UIColor clearColor]];
       self.alpha = 0.2;
-      
-      
       UILabel *textField = [[UILabel alloc] initWithFrame:[self bounds]];
       
       textField.text = str;
@@ -33,7 +33,17 @@
       
       _isPlaying = false;
       [self addSubview:textField];
+       [self setClipsToBounds:false];
       
+      myRadiationView = [[radiationView alloc]initWithFrame:CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width * 2, self.bounds.size.height * 2)
+                                           colour:[UIColor whiteColor]];
+      [myRadiationView.layer setZPosition: self.layer.zPosition - 1];
+      myRadiationView.screenHeight = _screenHeight;
+      [myRadiationView setCenter:CGPointMake(self.bounds.size.width *0.5, self.bounds.size.height * 0.5)];
+      [myRadiationView addGestureRecognizer:[[UIPinchGestureRecognizer alloc]initWithTarget:myRadiationView action:@selector(handlePinch:)]];
+      [myRadiationView addGestureRecognizer:[[UIPanGestureRecognizer alloc]initWithTarget:myRadiationView action:@selector(dragging:)]];
+      //[self set]
+      [self addSubview:myRadiationView];
    }
    return self;
 }
@@ -54,26 +64,10 @@
 }
 
 
--(void) dragging:(UIPanGestureRecognizer *)pan
-{
-      if (pan.state == UIGestureRecognizerStateBegan || pan.state == UIGestureRecognizerStateChanged) {
-         CGPoint delta = [pan translationInView:self];
-         CGPoint centre = self.center;
-         centre.x += delta.x;
-         centre.y += delta.y;
-         self.center = centre;
-         [self setMyCenter:self.center];
-         [pan setTranslation:CGPointZero inView:self];
-      }
-}
-
 
 - (void)blink{
-   
    if (_isPlaying)
-   
    {
-      
       [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionAllowUserInteraction                        animations:^{
                           self.alpha = 0.7;    // change alpha
                        }
@@ -94,12 +88,8 @@
    
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(void)updateRadiationSize:(float)theSize{
+   [myRadiationView setSize:theSize];
 }
-*/
 
 @end

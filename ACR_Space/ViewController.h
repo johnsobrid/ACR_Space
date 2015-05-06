@@ -27,6 +27,9 @@
 
 @property(strong) NSMutableArray *MechaViewArray;
 @property(strong) NSMutableArray *riddumViewArray;
+@property(strong) NSMutableArray *radiationViewArray;
+
+
 @property(strong) NSMutableArray *mechaPositionsX;
 @property(strong) NSMutableArray *mechaPositionsY;
 

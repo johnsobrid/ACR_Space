@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "radiationView.h"
 
 @interface riddumView : UIView
 
@@ -14,12 +15,16 @@
              colour:(UIColor*)col
               label:(NSString*)str;
 
--(void) dragging:(UIPanGestureRecognizer *)drag;
 - (void)blink;
+
+
 
 @property int myIndex;
 @property BOOL isPlaying;
 @property CGPoint myCenter;
+@property float screenHeight;
+
+-(void)updateRadiationSize:(float)theSize;
 
 
 @end

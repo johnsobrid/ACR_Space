@@ -19,6 +19,10 @@
 @implementation ViewController
 - (IBAction)radiationSlider:(UISlider *)sender {
    _storedRadiationDistance = [self.raditationdistance value];
+   for (riddumView *objects in _riddumViewArray)
+   {
+      [objects updateRadiationSize:_storedRadiationDistance * self.view.bounds.size.height];
+   }
   }
 
 -(BOOL)shouldAutorotate
@@ -31,9 +35,9 @@
    // Do any additional setup after loading the view, typically from a nib.
 
    //init the rythmns first so they sit underneath
-   
    [self riddumViewInit];
-     [self mechaViewInit];
+   [self mechaViewInit];
+   _storedRadiationDistance = 0.3;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -105,9 +109,7 @@
                                                        colour: [UIColor redColor]
                                                         label:[NSString stringWithFormat:@"%i",i]];
       newRiddumView.myIndex = i;
-      
-      
-      [newRiddumView addGestureRecognizer:[[UIPanGestureRecognizer alloc]initWithTarget:newRiddumView action:@selector(dragging:)]];
+      newRiddumView.screenHeight = self.view.bounds.size.height;
       [newRiddumView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(riddumPressed:)]];
       [newRiddumView addObserver:self
                    forKeyPath:@"myCenter"
@@ -121,6 +123,7 @@
    }
 
 }
+
 
 -(void)riddumPressed:(UITapGestureRecognizer *)riddumTapped
 {
@@ -209,33 +212,10 @@
            c = 1 - (c/_storedRadiationDistance);
             [self sendRiddumOSC:index withMechaID:i withVelcotiyScale:c];
          }
-         
-     //    NSLog([NSString stringWithFormat:@"%f",c]);
-
-         
    }
       
 }
 
--(void ) updatePosition: (CGPoint) position withID: (int)objectID
-{
-   CGPoint cavcenter = self.view.center;
-   position.x -= cavcenter.x;
-   position.y -= cavcenter.y;
-   
-   float d = sqrtf(position.x*position.x+position.y*position.y);
-   
-   d = (d/(self.view.bounds.size.width/2));
-   d = d*5;
-   float theta = atan2f(position.y,position.x);
-   if (theta < 0.0)
-   {
-      theta = theta + (M_PI *2);
-   }
-   //convert radians to degrees
-     
-
-}
 -(void)upDateOSC
 {
    //links the OSC messages to the port and IP as inputed on start up screen
@@ -253,27 +233,19 @@
 }
 - (void)sendOSC: (NSString*)msg  indexInt:(int)indexInt withMsgInt:(int) msgInt
 {
-   //sends an OSC message with a variable ID and a message int (mostly used for riddum objects)
+   //sends an OSC message with a variable ID and a message int (mostly used for riddum objects to play and stop)
    OSCMessage *newMsg = [OSCMessage createWithAddress:msg];
    [newMsg addString:[NSString stringWithFormat:@"/%i", indexInt]];
    [newMsg addInt:msgInt];
    [outport sendThisMessage:newMsg];
    // NSLog(msg);
 }
-- (void)sendOSC: (NSString*)msg  indexInt:(int)indexInt withMsgFloat:(float) msgFloat
-{
-   //sends an OSC message with a variable ID and a message int (mostly used for riddum objects)
-   OSCMessage *newMsg = [OSCMessage createWithAddress:msg];
-   [newMsg addString:[NSString stringWithFormat:@"/%i", indexInt]];
-   [newMsg addFloat:msgFloat];
-   [outport sendThisMessage:newMsg];
-   // NSLog(msg);
-}
+
 
 - (void)sendRiddumOSC: (int)riddumID  withMechaID:(int)mechaID withVelcotiyScale:(float) velocityScale
 {
    //sends an OSC message with a variable ID and a message int (mostly used for riddum objects)
-   OSCMessage *newMsg = [OSCMessage createWithAddress:[NSString stringWithFormat:@"/%i", riddumID]];
+   OSCMessage *newMsg = [OSCMessage createWithAddress:[NSString stringWithFormat:@"/rhythm %i", riddumID]];
    [newMsg addInt:mechaID];
    [newMsg addFloat:velocityScale];
    [outport sendThisMessage:newMsg];

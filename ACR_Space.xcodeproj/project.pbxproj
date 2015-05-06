@@ -21,6 +21,7 @@
 		4FC165E91ADF1A3800541BF9 /* riddumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC165E81ADF1A3800541BF9 /* riddumView.m */; };
 		4FC646561AC8B87600309531 /* libVVBasics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC646451AC8B7EB00309531 /* libVVBasics.a */; };
 		4FC646571AC8B87600309531 /* libVVOSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC646471AC8B7EB00309531 /* libVVOSC.a */; };
+		4FE513961AF1F433004C4DE6 /* radiationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE513951AF1F433004C4DE6 /* radiationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +219,8 @@
 		4FC165E71ADF1A3800541BF9 /* riddumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = riddumView.h; path = Views/riddumView.h; sourceTree = "<group>"; };
 		4FC165E81ADF1A3800541BF9 /* riddumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = riddumView.m; path = Views/riddumView.m; sourceTree = "<group>"; };
 		4FC6460C1AC8B7E800309531 /* VVOpenSource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VVOpenSource.xcodeproj; path = "../vvopensource-master/VVOpenSource.xcodeproj"; sourceTree = "<group>"; };
+		4FE513941AF1F433004C4DE6 /* radiationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = radiationView.h; sourceTree = "<group>"; };
+		4FE513951AF1F433004C4DE6 /* radiationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = radiationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +268,8 @@
 				4F1F22411AC22FD7001FF6DC /* Main.storyboard */,
 				4FC165E71ADF1A3800541BF9 /* riddumView.h */,
 				4FC165E81ADF1A3800541BF9 /* riddumView.m */,
+				4FE513941AF1F433004C4DE6 /* radiationView.h */,
+				4FE513951AF1F433004C4DE6 /* radiationView.m */,
 				4F1F223E1AC22FD7001FF6DC /* ViewController.h */,
 				4F1F223F1AC22FD7001FF6DC /* ViewController.m */,
 				4FC165E21ADE0F5800541BF9 /* settingsViewController.h */,
@@ -603,6 +608,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE513961AF1F433004C4DE6 /* radiationView.m in Sources */,
 				4F390C871AD5EFAF0016C63D /* drawSpeakers.m in Sources */,
 				4F1F22401AC22FD7001FF6DC /* ViewController.m in Sources */,
 				4F1F223D1AC22FD7001FF6DC /* AppDelegate.m in Sources */,
