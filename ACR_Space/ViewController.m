@@ -96,8 +96,8 @@
    _riddumViewArray = [NSMutableArray arrayWithCapacity:0];
    CGRect bounds = [[self view]bounds];
    
-   float boxWidth = 60;
-   float gapWidth = (bounds.size.width - (boxWidth * 8)) / (9);
+   float boxWidth = 80; //60;
+    float gapWidth = (bounds.size.width - (boxWidth * 8)) / (9);
    float x = gapWidth;
    float y = bounds.size.height - (boxWidth*1.25);
    

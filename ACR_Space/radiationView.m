@@ -17,6 +17,8 @@
    _col = col;
    
    [self setBackgroundColor:[UIColor clearColor]];
+    [self setUserInteractionEnabled:true];
+    [self setClipsToBounds:false];
    //[self setSize:0.0];
    
    return self;
@@ -27,29 +29,23 @@
 }
 -(void)handlePinch:(UIPinchGestureRecognizer *)pinch
 {
-  // pinch.view.transform = CGAffineTransformScale(pinch.view.transform, pinch.scale, pinch.scale);
+  //
   // pinch.scale = 1;
  //  [self setSize:(pinch.scale*_screenHeight)];
  //  pinch.scale = 1;
-   
+   /* NSLog(@"Pinch value = %f", pinch.scale);
    CGRect frame = [self bounds];
-   frame.size.width = frame.size.width * pinch.scale;
-   frame.size.height = frame.size.height *pinch.scale;
-   [self setBounds:frame];
-   pinch.scale = 1.0;
+    
+    float value = frame.size.width * fminf(fmaxf(pinch.scale,0.2),0.6);
+    frame.size.width = value;
+    
+    
+    frame.size.height = value;
+   [self setBounds:frame];*/
+    pinch.view.transform = CGAffineTransformScale(pinch.view.transform, pinch.scale, pinch.scale);
+   //pinch.scale = 1.0;
 }
--(void) dragging:(UIPanGestureRecognizer *)pan
-{
-   if (pan.state == UIGestureRecognizerStateBegan || pan.state == UIGestureRecognizerStateChanged) {
-      CGPoint delta = [pan translationInView:self];
-      CGPoint centre = self.center;
-      centre.x += delta.x;
-      centre.y += delta.y;
-      self.center = centre;
-      [self setMyCenter:self.center];
-      [pan setTranslation:CGPointZero inView:self];
-   }
-}
+
 
 -(void)setSize:(float)size{
    [self setBounds:CGRectMake(self.center.x, self.center.y, size, size)];

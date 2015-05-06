@@ -10,6 +10,7 @@
 
 @implementation riddumView {
    radiationView *myRadiationView;
+
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -32,20 +33,45 @@
       //   textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
       
       _isPlaying = false;
-      [self addSubview:textField];
+     // [self addSubview:textField];
        [self setClipsToBounds:false];
       
       myRadiationView = [[radiationView alloc]initWithFrame:CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width * 2, self.bounds.size.height * 2)
-                                           colour:[UIColor whiteColor]];
-      [myRadiationView.layer setZPosition: self.layer.zPosition - 1];
+                                           colour:[UIColor blueColor]];
+      [myRadiationView.layer setZPosition: self.layer.zPosition + 1];
       myRadiationView.screenHeight = _screenHeight;
       [myRadiationView setCenter:CGPointMake(self.bounds.size.width *0.5, self.bounds.size.height * 0.5)];
-      [myRadiationView addGestureRecognizer:[[UIPinchGestureRecognizer alloc]initWithTarget:myRadiationView action:@selector(handlePinch:)]];
-      [myRadiationView addGestureRecognizer:[[UIPanGestureRecognizer alloc]initWithTarget:myRadiationView action:@selector(dragging:)]];
-      //[self set]
+       UIPinchGestureRecognizer * pinch = [[UIPinchGestureRecognizer alloc]initWithTarget:myRadiationView action:@selector(handlePinch:)];
+
+      [myRadiationView addGestureRecognizer:pinch];
+       
+       UIPanGestureRecognizer * pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(dragging:)];
+       
+      // [pan requireGestureRecognizerToFail:pinch];
+       
+      [myRadiationView addGestureRecognizer:pan];
+
       [self addSubview:myRadiationView];
+       
+       
    }
    return self;
+}
+-(void) handlePinch:(UIPinchGestureRecognizer *)pinch{
+    NSLog(@"pinch scale %f",pinch.scale);
+}
+
+-(void) dragging:(UIPanGestureRecognizer *)pan
+{
+    if (pan.state == UIGestureRecognizerStateBegan || pan.state == UIGestureRecognizerStateChanged) {
+        CGPoint delta = [pan translationInView:self];
+        CGPoint centre = self.center;
+        centre.x += delta.x;
+        centre.y += delta.y;
+        self.center = centre;
+        [self setMyCenter:self.center];
+        [pan setTranslation:CGPointZero inView:self];
+    }
 }
 - (void)drawRect:(CGRect)rect
 {
