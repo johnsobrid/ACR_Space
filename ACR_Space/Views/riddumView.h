@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "radiationView.h"
 
 @interface riddumView : UIView
 
@@ -23,8 +22,12 @@
 @property BOOL isPlaying;
 @property CGPoint myCenter;
 @property float screenHeight;
+@property float radiationSize;
 
--(void)updateRadiationSize:(float)theSize;
+-(void)handlePinch:(UIPinchGestureRecognizer *)pinch;
+-(void) dragging:(UIPanGestureRecognizer *)pan;
+
+
 
 
 @end

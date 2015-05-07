@@ -27,10 +27,7 @@
 }
 -(void)handlePinch:(UIPinchGestureRecognizer *)pinch
 {
-  // pinch.view.transform = CGAffineTransformScale(pinch.view.transform, pinch.scale, pinch.scale);
-  // pinch.scale = 1;
- //  [self setSize:(pinch.scale*_screenHeight)];
- //  pinch.scale = 1;
+ 
    
    CGRect frame = [self bounds];
    frame.size.width = frame.size.width * pinch.scale;

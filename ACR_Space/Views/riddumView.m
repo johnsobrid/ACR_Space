@@ -8,9 +8,8 @@
 
 #import "riddumView.h"
 
-@implementation riddumView {
-   radiationView *myRadiationView;
-}
+@implementation riddumView
+
 
 - (id)initWithFrame:(CGRect)frame
              colour:(UIColor*)col
@@ -35,16 +34,7 @@
       [self addSubview:textField];
        [self setClipsToBounds:false];
       
-      myRadiationView = [[radiationView alloc]initWithFrame:CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width * 2, self.bounds.size.height * 2)
-                                           colour:[UIColor whiteColor]];
-      [myRadiationView.layer setZPosition: self.layer.zPosition - 1];
-      myRadiationView.screenHeight = _screenHeight;
-      [myRadiationView setCenter:CGPointMake(self.bounds.size.width *0.5, self.bounds.size.height * 0.5)];
-      [myRadiationView addGestureRecognizer:[[UIPinchGestureRecognizer alloc]initWithTarget:myRadiationView action:@selector(handlePinch:)]];
-      [myRadiationView addGestureRecognizer:[[UIPanGestureRecognizer alloc]initWithTarget:myRadiationView action:@selector(dragging:)]];
-      //[self set]
-      [self addSubview:myRadiationView];
-   }
+      }
    return self;
 }
 - (void)drawRect:(CGRect)rect
@@ -62,8 +52,32 @@
    //OR draw a rectangle
    
 }
+-(void)handlePinch:(UIPinchGestureRecognizer *)pinch
+{
+   
+   CGRect frame = [self bounds];
+   frame.size.width = frame.size.width * pinch.scale;
+   frame.size.height = frame.size.height *pinch.scale;
+   [self setBounds:frame];
+   pinch.scale = 1.0;
+}
+-(void) dragging:(UIPanGestureRecognizer *)pan
+{
+   if (pan.state == UIGestureRecognizerStateBegan || pan.state == UIGestureRecognizerStateChanged) {
+      CGPoint delta = [pan translationInView:self];
+      CGPoint centre = self.center;
+      centre.x += delta.x;
+      centre.y += delta.y;
+      self.center = centre;
+      [self setMyCenter:self.center];
+      [pan setTranslation:CGPointZero inView:self];
+   }
+}
 
-
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)pinch shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)pan
+{
+   return YES;
+}
 
 - (void)blink{
    if (_isPlaying)
@@ -88,8 +102,6 @@
    
 }
 
--(void)updateRadiationSize:(float)theSize{
-   [myRadiationView setSize:theSize];
-}
+
 
 @end

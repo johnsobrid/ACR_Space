@@ -96,7 +96,7 @@
    _riddumViewArray = [NSMutableArray arrayWithCapacity:0];
    CGRect bounds = [[self view]bounds];
    
-   float boxWidth = 60;
+   float boxWidth = 100;
    float gapWidth = (bounds.size.width - (boxWidth * 8)) / (9);
    float x = gapWidth;
    float y = bounds.size.height - (boxWidth*1.25);
@@ -111,12 +111,15 @@
       newRiddumView.myIndex = i;
       newRiddumView.screenHeight = self.view.bounds.size.height;
       [newRiddumView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(riddumPressed:)]];
+      [newRiddumView addGestureRecognizer:[[UIPinchGestureRecognizer alloc]initWithTarget:newRiddumView action:@selector(handlePinch:)]];
+      [newRiddumView addGestureRecognizer:[[UIPanGestureRecognizer alloc]initWithTarget:newRiddumView action:@selector(dragging:)]];
       [newRiddumView addObserver:self
                    forKeyPath:@"myCenter"
                       options:(NSKeyValueObservingOptionNew |
                                NSKeyValueObservingOptionOld)
                       context:NULL];
-      
+      [newRiddumView setUserInteractionEnabled:YES];
+
       [_riddumViewArray addObject:newRiddumView];
       [[self view] addSubview:newRiddumView];
       [newRiddumView setNeedsDisplay];
