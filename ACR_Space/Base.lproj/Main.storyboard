@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3Ve-zl-or7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3Ve-zl-or7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -60,7 +60,7 @@
                                         </state>
                                         <connections>
                                             <action selector="connectPressed" destination="3Ve-zl-or7" eventType="touchUpInside" id="t9C-ut-an0"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="doneSegue" id="19k-aU-KCB"/>
+                                            <segue destination="HwX-5z-aXA" kind="show" id="kw1-8j-H2f"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -221,6 +221,33 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="302" y="203"/>
+        </scene>
+        <!--Game Scene View Controller-->
+        <scene sceneID="e3S-7O-bVl">
+            <objects>
+                <viewController id="HwX-5z-aXA" customClass="gameSceneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eQc-OU-qji"/>
+                        <viewControllerLayoutGuide type="bottom" id="b5A-Xz-fyy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zu0-KW-TJO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2bf-rK-lzq" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainSpriteKitView" destination="2bf-rK-lzq" id="4wM-0U-ceU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47x-fd-kx0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-682" y="1043"/>
         </scene>
     </scenes>
 </document>
