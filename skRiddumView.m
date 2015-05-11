@@ -8,7 +8,9 @@
 
 #import "skRiddumView.h"
 
-@implementation skRiddumView
+@implementation skRiddumView{
+    CGPoint touchOffset;
+}
 
 -(id)initWithSize:(CGSize)size andColor:(UIColor *) color{
     self = [super initWithColor:[UIColor clearColor] size:size];
@@ -31,13 +33,19 @@
     
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    touchOffset = [[touches anyObject] locationInNode:self];
+   // NSLog(@"Offset is (%f,%f)",offset.x,offset.y);
+}
+
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     
     CGPoint positionInParent = [[touches anyObject] locationInNode:self.parent];
-
-    [self setPosition:positionInParent];
-    
+    CGPoint positionToMoveTo;
+    positionToMoveTo.x = positionInParent.x - touchOffset.x;
+    positionToMoveTo.y = positionInParent.y - touchOffset.y;
+    [self setPosition:positionToMoveTo];
 }
 
 @end

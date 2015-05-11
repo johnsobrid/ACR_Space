@@ -11,6 +11,7 @@
 
 @implementation mainSKScene{
     skRiddumView * riddum;
+    
 }
 
 -(id)initWithSize:(CGSize)size{

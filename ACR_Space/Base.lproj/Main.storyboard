@@ -230,16 +230,19 @@
                         <viewControllerLayoutGuide type="top" id="eQc-OU-qji"/>
                         <viewControllerLayoutGuide type="bottom" id="b5A-Xz-fyy"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Zu0-KW-TJO">
+                    <view key="view" contentMode="center" id="Zu0-KW-TJO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2bf-rK-lzq" customClass="SKView">
+                            <view autoresizesSubviews="NO" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2bf-rK-lzq" customClass="SKView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
+                                </variation>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="mainSpriteKitView" destination="2bf-rK-lzq" id="4wM-0U-ceU"/>
@@ -247,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47x-fd-kx0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-682" y="1043"/>
+            <point key="canvasLocation" x="-682.5" y="1042.5"/>
         </scene>
     </scenes>
 </document>
