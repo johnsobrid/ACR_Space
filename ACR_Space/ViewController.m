@@ -111,7 +111,6 @@
       newRiddumView.myIndex = i;
       newRiddumView.screenHeight = self.view.bounds.size.height;
       [newRiddumView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(riddumPressed:)]];
-      [newRiddumView addGestureRecognizer:[[UIPinchGestureRecognizer alloc]initWithTarget:newRiddumView action:@selector(handlePinch:)]];
       [newRiddumView addGestureRecognizer:[[UIPanGestureRecognizer alloc]initWithTarget:newRiddumView action:@selector(dragging:)]];
       [newRiddumView addObserver:self
                    forKeyPath:@"myCenter"

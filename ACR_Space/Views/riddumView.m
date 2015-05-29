@@ -9,7 +9,9 @@
 #import "riddumView.h"
 
 @implementation riddumView
-
+{
+radiationView  *newRadiationView;
+}
 
 - (id)initWithFrame:(CGRect)frame
              colour:(UIColor*)col
@@ -32,6 +34,7 @@
       
       _isPlaying = false;
       [self addSubview:textField];
+      [self initRadiation];
        [self setClipsToBounds:false];
       
       }
@@ -52,15 +55,7 @@
    //OR draw a rectangle
    
 }
--(void)handlePinch:(UIPinchGestureRecognizer *)pinch
-{
-   
-   CGRect frame = [self bounds];
-   frame.size.width = frame.size.width * pinch.scale;
-   frame.size.height = frame.size.height *pinch.scale;
-   [self setBounds:frame];
-   pinch.scale = 1.0;
-}
+
 -(void) dragging:(UIPanGestureRecognizer *)pan
 {
    if (pan.state == UIGestureRecognizerStateBegan || pan.state == UIGestureRecognizerStateChanged) {
@@ -70,13 +65,26 @@
       centre.y += delta.y;
       self.center = centre;
       [self setMyCenter:self.center];
+      [newRadiationView setMyCenter:self.center];
       [pan setTranslation:CGPointZero inView:self];
    }
 }
 
--(BOOL)gestureRecognizer:(UIGestureRecognizer *)pinch shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)pan
+-(void)initRadiation
 {
-   return YES;
+   newRadiationView = [[radiationView alloc]initWithFrame:CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height)
+                                                                     colour:[UIColor blueColor]];
+   [newRadiationView.layer setZPosition: self.layer.zPosition + 1];
+   [newRadiationView setCenter:CGPointMake(self.bounds.size.width *0.5, self.bounds.size.height * 0.5)];
+newRadiationView.myIndex = self.myIndex;
+   [self addSubview:newRadiationView];
+   
+  
+}
+-(void)updateRadiationSize:(float)newRaditiationSize
+{
+   [newRadiationView setSize:newRaditiationSize];
+   
 }
 
 - (void)blink{

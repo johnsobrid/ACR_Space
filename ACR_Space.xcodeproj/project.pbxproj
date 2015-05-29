@@ -17,6 +17,7 @@
 		4F1F22541AC22FD8001FF6DC /* ACR_SpaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F22531AC22FD8001FF6DC /* ACR_SpaceTests.m */; };
 		4F1F225F1AC232B1001FF6DC /* MechaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F225E1AC232B1001FF6DC /* MechaView.m */; };
 		4F390C871AD5EFAF0016C63D /* drawSpeakers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F390C861AD5EFAF0016C63D /* drawSpeakers.m */; };
+		4F79653C1B17C2BC00660BEA /* radiationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F79653B1B17C2BC00660BEA /* radiationView.m */; };
 		4FC165E41ADE0F5800541BF9 /* settingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC165E31ADE0F5800541BF9 /* settingsViewController.m */; };
 		4FC165E91ADF1A3800541BF9 /* riddumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC165E81ADF1A3800541BF9 /* riddumView.m */; };
 		4FC646561AC8B87600309531 /* libVVBasics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC646451AC8B7EB00309531 /* libVVBasics.a */; };
@@ -213,6 +214,8 @@
 		4F1F225E1AC232B1001FF6DC /* MechaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MechaView.m; path = Views/MechaView.m; sourceTree = "<group>"; };
 		4F390C851AD5EFAF0016C63D /* drawSpeakers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawSpeakers.h; sourceTree = "<group>"; };
 		4F390C861AD5EFAF0016C63D /* drawSpeakers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = drawSpeakers.m; sourceTree = "<group>"; };
+		4F79653A1B17C2BC00660BEA /* radiationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = radiationView.h; sourceTree = "<group>"; };
+		4F79653B1B17C2BC00660BEA /* radiationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = radiationView.m; sourceTree = "<group>"; };
 		4FC165E21ADE0F5800541BF9 /* settingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsViewController.h; sourceTree = "<group>"; };
 		4FC165E31ADE0F5800541BF9 /* settingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsViewController.m; sourceTree = "<group>"; };
 		4FC165E71ADF1A3800541BF9 /* riddumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = riddumView.h; path = Views/riddumView.h; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 		4F1F22361AC22FD6001FF6DC /* ACR_Space */ = {
 			isa = PBXGroup;
 			children = (
+				4F79653A1B17C2BC00660BEA /* radiationView.h */,
+				4F79653B1B17C2BC00660BEA /* radiationView.m */,
 				4F1F22411AC22FD7001FF6DC /* Main.storyboard */,
 				4FC165E71ADF1A3800541BF9 /* riddumView.h */,
 				4FC165E81ADF1A3800541BF9 /* riddumView.m */,
@@ -603,6 +608,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F79653C1B17C2BC00660BEA /* radiationView.m in Sources */,
 				4F390C871AD5EFAF0016C63D /* drawSpeakers.m in Sources */,
 				4F1F22401AC22FD7001FF6DC /* ViewController.m in Sources */,
 				4F1F223D1AC22FD7001FF6DC /* AppDelegate.m in Sources */,

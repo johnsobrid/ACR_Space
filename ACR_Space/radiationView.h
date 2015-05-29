@@ -24,8 +24,6 @@
 
 @property CGPoint myCenter;
 
--(void)handlePinch:(UIPinchGestureRecognizer *)pinch;
--(void) dragging:(UIPanGestureRecognizer *)pan;
 
 
 @end

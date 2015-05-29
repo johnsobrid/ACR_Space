@@ -23,33 +23,12 @@
 }
 -(void)viewDidLoad
 {
-  // [self setSize:0.5 * self.superview.bounds.size.height];
-}
--(void)handlePinch:(UIPinchGestureRecognizer *)pinch
-{
- 
-   
-   CGRect frame = [self bounds];
-   frame.size.width = frame.size.width * pinch.scale;
-   frame.size.height = frame.size.height *pinch.scale;
-   [self setBounds:frame];
-   pinch.scale = 1.0;
-}
--(void) dragging:(UIPanGestureRecognizer *)pan
-{
-   if (pan.state == UIGestureRecognizerStateBegan || pan.state == UIGestureRecognizerStateChanged) {
-      CGPoint delta = [pan translationInView:self];
-      CGPoint centre = self.center;
-      centre.x += delta.x;
-      centre.y += delta.y;
-      self.center = centre;
-      [self setMyCenter:self.center];
-      [pan setTranslation:CGPointZero inView:self];
-   }
+   //[self setSize:0.5 * self.superview.bounds.size.height];
 }
 
 -(void)setSize:(float)size{
    [self setBounds:CGRectMake(self.center.x, self.center.y, size, size)];
+ //  [self setNeedsDisplay];
 }
 
 - (void)drawRect:(CGRect)rect
