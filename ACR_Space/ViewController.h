@@ -34,7 +34,11 @@
 @property(strong) NSMutableArray *mechaPositionsY;
 
 
-@property float storedRadiationDistance;
+@property float storedRadiationDistanceOne;
+@property float storedRadiationDistanceTwo;
+@property float storedRadiationDistanceThree;
+@property float storedRadiationDistanceFour;
+
 
 
 @end

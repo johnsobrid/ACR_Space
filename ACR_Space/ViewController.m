@@ -10,6 +10,9 @@
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UISlider *raditationdistance;
+@property (strong, nonatomic) IBOutlet UISlider *radiationDistTwo;
+@property (strong, nonatomic) IBOutlet UISlider *radiationDistThree;
+@property (strong, nonatomic) IBOutlet UISlider *radiationDistfour;
 
 
 @property BOOL allowMovement;
@@ -18,12 +21,23 @@
 
 @implementation ViewController
 - (IBAction)radiationSlider:(UISlider *)sender {
-   _storedRadiationDistance = [self.raditationdistance value];
-   for (riddumView *objects in _riddumViewArray)
-   {
-      [objects updateRadiationSize:_storedRadiationDistance * self.view.bounds.size.height];
-   }
-  }
+   _storedRadiationDistanceOne = [self.raditationdistance value];
+        [[_riddumViewArray objectAtIndex:0] updateRadiationSize:_storedRadiationDistanceOne * self.view.bounds.size.height];
+}
+- (IBAction)raditationSlider2:(UISlider *)sender {
+   _storedRadiationDistanceTwo = [self.radiationDistTwo value];
+   [[_riddumViewArray objectAtIndex:1] updateRadiationSize:_storedRadiationDistanceTwo * self.view.bounds.size.height];
+}
+
+- (IBAction)radiationSliderThree:(UISlider *)sender {
+   _storedRadiationDistanceThree = [self.radiationDistThree value];
+   [[_riddumViewArray objectAtIndex:2] updateRadiationSize:_storedRadiationDistanceThree * self.view.bounds.size.height];
+}
+- (IBAction)radiationSliderFour:(UISlider *)sender {
+   _storedRadiationDistanceFour = [self.radiationDistfour value];
+   [[_riddumViewArray objectAtIndex:3] updateRadiationSize:_storedRadiationDistanceFour * self.view.bounds.size.height];
+}
+
 
 -(BOOL)shouldAutorotate
 {
@@ -37,7 +51,13 @@
    //init the rythmns first so they sit underneath
    [self riddumViewInit];
    [self mechaViewInit];
-   _storedRadiationDistance = 0.3;
+   _storedRadiationDistanceOne = 0.3;
+   _storedRadiationDistanceTwo = 0.3;
+
+   _storedRadiationDistanceThree = 0.3;
+
+   _storedRadiationDistanceFour = 0.3;
+
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -208,11 +228,41 @@
       float c = sqrtf(a * a + b * b);
           c = c/self.view.bounds.size.height;
          
-         if (c < _storedRadiationDistance)
+         if (index == 0)
          {
-            //send details about yourself rhytm ID, mechaID (i) velocityScale(c)
-           c = 1 - (c/_storedRadiationDistance);
-            [self sendRiddumOSC:index withMechaID:i withVelcotiyScale:c];
+            if (c < _storedRadiationDistanceOne)
+            {
+               //send details about yourself rhytm ID, mechaID (i) velocityScale(c)
+               c = 1 - (c/_storedRadiationDistanceOne);
+               [self sendRiddumOSC:index withMechaID:i withVelcotiyScale:c];
+            }
+         }
+         if (index == 1)
+         {
+            if (c < _storedRadiationDistanceTwo)
+            {
+               //send details about yourself rhytm ID, mechaID (i) velocityScale(c)
+               c = 1 - (c/_storedRadiationDistanceTwo);
+               [self sendRiddumOSC:index withMechaID:i withVelcotiyScale:c];
+            }
+         }
+         if (index == 2)
+         {
+            if (c < _storedRadiationDistanceThree)
+            {
+               //send details about yourself rhytm ID, mechaID (i) velocityScale(c)
+               c = 1 - (c/_storedRadiationDistanceThree);
+               [self sendRiddumOSC:index withMechaID:i withVelcotiyScale:c];
+            }
+         }
+         if (index == 3)
+         {
+            if (c < _storedRadiationDistanceFour)
+            {
+               //send details about yourself rhytm ID, mechaID (i) velocityScale(c)
+               c = 1 - (c/_storedRadiationDistanceFour);
+               [self sendRiddumOSC:index withMechaID:i withVelcotiyScale:c];
+            }
          }
    }
       
